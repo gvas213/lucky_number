@@ -17,11 +17,12 @@ while play.lower() == 'y':
 
 # create user list of 5
     while len(user_list) <=4:
-        user_num = int(input("enter a number 1-70: "))
+        user_num = input("enter a number 1-70: ")
 
         while str(user_num).isnumeric() == False or int(user_num) < 1 or int(user_num) > 70:
             user_num = input("Sorry that's not an option. Please enter a number 1-70: ")
 
+        user_num = int(user_num)
         user_list.append(user_num)
 
 #create computer list of 5
@@ -40,8 +41,8 @@ while play.lower() == 'y':
     if len(match_list) > 0:
         print(f"here are your matches: {match_list}")
 
-    user_list.sort()
-    comp_list.sort()
+    # user_list.sort()
+    # comp_list.sort()
 
     user_list =  str(user_list)
     comp_list = str(comp_list)
